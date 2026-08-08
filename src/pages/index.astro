@@ -1,25 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import Hero from "../components/home/Hero.astro";
 ---
 
 <BaseLayout>
-  <main class="min-h-screen bg-background">
-    <section class="page-container section-spacing">
-      <p class="mb-4 text-sm uppercase tracking-[0.3em] text-accent">
-        Portfolio 2026
-      </p>
+  <Navbar />
 
-      <h1
-        class="max-w-4xl text-5xl font-bold tracking-tight text-foreground md:text-7xl"
-      >
-        Construyo software para
-        <span class="text-accent"> problemas reales.</span>
-      </h1>
-
-      <p class="mt-8 max-w-2xl text-lg leading-8 text-muted">
-        Desarrollador full-stack enfocado en crear aplicaciones web,
-        herramientas internas y productos digitales.
-      </p>
-    </section>
+  <main>
+    <Hero />
   </main>
 </BaseLayout>
