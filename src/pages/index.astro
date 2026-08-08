@@ -1,22 +1,25 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <title>Raymundo Chavez | Full-Stack Developer</title>
-  </head>
+<BaseLayout>
+  <main class="min-h-screen bg-background">
+    <section class="page-container section-spacing">
+      <p class="mb-4 text-sm uppercase tracking-[0.3em] text-accent">
+        Portfolio 2026
+      </p>
 
-  <body>
-    <main class="min-h-screen bg-black text-white">
-      <h1 class="text-5xl font-bold">
-        Portfolio V2
+      <h1
+        class="max-w-4xl text-5xl font-bold tracking-tight text-foreground md:text-7xl"
+      >
+        Construyo software para
+        <span class="text-accent"> problemas reales.</span>
       </h1>
-    </main>
-  </body>
-</html>
+
+      <p class="mt-8 max-w-2xl text-lg leading-8 text-muted">
+        Desarrollador full-stack enfocado en crear aplicaciones web,
+        herramientas internas y productos digitales.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
