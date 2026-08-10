@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
+---
+
 <section id="proyectos" class="section-spacing">
   <div class="page-container">
     <div class="mb-16 md:mb-24">
@@ -104,7 +109,7 @@
           </div>
 
           <div
-            class="absolute inset-6 rounded-xl border border-border bg-background/80"
+            class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
           >
             <div
               class="flex h-10 items-center gap-2 border-b border-border px-4"
@@ -114,8 +119,12 @@
               <span class="size-2 rounded-full bg-muted/30"></span>
             </div>
 
-            <div class="flex h-[calc(100%-2.5rem)] items-center justify-center">
-              <span class="text-sm text-muted"> Dashboard Test Flow </span>
+            <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+              <Image
+                src={testFlowDashboard}
+                alt="Dashboard principal de Test Flow con datos ficticios"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+              />
             </div>
           </div>
         </div>
