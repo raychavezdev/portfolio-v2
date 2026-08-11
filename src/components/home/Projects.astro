@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
+
 import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
+import daleSkateHome from "../../assets/projects/dale-skate/home.png";
 ---
 
 <section id="proyectos" class="section-spacing">
@@ -153,7 +155,13 @@ import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
             </div>
 
             <div class="flex h-[calc(100%-2.5rem)] items-center justify-center">
-              <span class="text-sm text-muted"> Dale Skate </span>
+              <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+                <Image
+                  src={daleSkateHome}
+                  alt="Página principal de Dale Skate"
+                  class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -233,10 +241,10 @@ import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
     >
       <article class="group">
         <div
-          class="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-300 group-hover:border-accent/30"
+          class="relative aspect-4/3 overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-300 group-hover:border-accent/30"
         >
           <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgb(0_217_255_/_8%),transparent_50%)]"
+            class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgb(0_217_255/8%),transparent_50%)]"
           >
           </div>
 
