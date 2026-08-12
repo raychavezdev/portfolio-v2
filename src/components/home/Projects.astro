@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
 import daleSkateHome from "../../assets/projects/dale-skate/home.png";
 import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
+import mcSkinStealerPreview from "../../assets/projects/mc-skin-stealer/preview.png";
 ---
 
 <section id="proyectos" class="section-spacing">
@@ -329,9 +330,23 @@ import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
           </div>
 
           <div
-            class="absolute inset-6 flex items-center justify-center rounded-xl border border-border bg-background/80"
+            class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
           >
-            <span class="text-sm text-muted"> Skatlas </span>
+            <div
+              class="flex h-10 items-center gap-2 border-b border-border px-4"
+            >
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+            </div>
+
+            <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+              <Image
+                src={mcSkinStealerPreview}
+                alt="Interfaz de MC Skin Stealer mostrando el resultado de una búsqueda"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
           </div>
         </div>
 
@@ -340,28 +355,22 @@ import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
             <span class="text-sm text-muted">04</span>
 
             <span class="text-xs uppercase tracking-wider text-muted">
-              En desarrollo
+              Proyecto personal
             </span>
           </div>
 
           <h3
             class="mt-4 text-3xl font-semibold tracking-tight text-foreground"
           >
-            Skatlas
+            MC Skin Stealer
           </h3>
 
           <p class="mt-4 max-w-xl leading-7 text-muted">
-            Plataforma para descubrir spots de skate y explorar lugares cercanos
-            mediante ubicación, categorías y características del spot.
+            Herramienta web para buscar y descargar skins de Minecraft a partir
+            del nombre de usuario con una interfaz sencilla y previsualización 3D.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              Laravel
-            </span>
-
             <span
               class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
             >
@@ -371,18 +380,18 @@ import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
             <span
               class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
             >
-              PostgreSQL
+              Vite
             </span>
 
             <span
               class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
             >
-              Docker
+              i18n
             </span>
           </div>
 
           <a
-            href="/proyectos/skatlas"
+            href="/proyectos/mc-skin-stealer"
             class="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
           >
             Ver proyecto →
