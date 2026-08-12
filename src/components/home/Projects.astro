@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 
 import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
 import daleSkateHome from "../../assets/projects/dale-skate/home.png";
+import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
 ---
 
 <section id="proyectos" class="section-spacing">
@@ -249,9 +250,23 @@ import daleSkateHome from "../../assets/projects/dale-skate/home.png";
           </div>
 
           <div
-            class="absolute inset-6 flex items-center justify-center rounded-xl border border-border bg-background/80"
+            class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
           >
-            <span class="text-sm text-muted"> DevTrayck </span>
+            <div
+              class="flex h-10 items-center gap-2 border-b border-border px-4"
+            >
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+            </div>
+
+            <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+              <Image
+                src={devTrayckDashboard}
+                alt="Gestión de tareas de un proyecto en DevTrayck"
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
           </div>
         </div>
 
