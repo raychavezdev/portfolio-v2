@@ -65,4 +65,69 @@ body {
   .section-spacing {
     padding-block: 7rem;
   }
+
+.tech-card {
+  @apply relative overflow-hidden rounded-3xl border border-border bg-surface/40 p-6 transition-all duration-300 sm:p-8;
+}
+
+.tech-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 80% 0%,
+    rgb(0 217 255 / 6%),
+    transparent 18rem
+  );
+  pointer-events: none;
+}
+
+.tech-card:hover {
+  @apply border-accent/30 bg-surface/70;
+  transform: translateY(-2px);
+}
+
+.tech-card-index {
+  @apply text-xs font-medium uppercase tracking-[0.22em] text-accent;
+}
+
+.tech-card-title {
+  @apply mt-6 text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-3xl;
+}
+
+.tech-card-copy {
+  @apply mt-4 max-w-xl text-sm leading-6 text-muted sm:text-base;
+}
+
+.tech-item {
+  @apply relative flex items-center gap-3 rounded-2xl border border-border bg-background/50 px-4 py-3 text-sm text-muted transition-all duration-300;
+}
+
+.tech-item:hover {
+  @apply border-accent/40 bg-accent/5 text-foreground;
+}
+
+.tech-icon {
+  @apply flex size-9 shrink-0 items-center justify-center rounded-lg border border-border bg-surface text-[10px] font-semibold text-muted transition-colors duration-300;
+}
+
+.tech-item:hover .tech-icon {
+  @apply border-accent/40 text-accent;
+}
+
+
+.tech-logo {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: currentColor;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
 }
