@@ -147,4 +147,27 @@ body {
   @apply border-accent/40 bg-accent/5 text-foreground;
 }
 
+
+.hero-glow {
+    animation: hero-glow-float 10s ease-in-out infinite;
+  }
+
+  @keyframes hero-glow-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+      transform: translate3d(-24px, 18px, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-glow {
+      animation: none;
+    }
+  }
+
+
 }

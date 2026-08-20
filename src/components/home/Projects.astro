@@ -5,239 +5,250 @@ import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
 import daleSkateHome from "../../assets/projects/dale-skate/home.png";
 import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
 import mcSkinStealerPreview from "../../assets/projects/mc-skin-stealer/preview.png";
+import Reveal from "../animations/Reveal";
 ---
 
 <section id="proyectos" class="section-spacing">
   <div class="page-container">
-    <div class="mb-16 md:mb-24">
-      <p
-        class="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-accent"
-      >
-        02 / Proyectos destacados
-      </p>
-
-      <h2
-        class="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl md:text-6xl"
-      >
-        De la idea
-        <span class="block text-muted">a producción.</span>
-      </h2>
-
-      <p class="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-        Una selección de proyectos en los que he participado desde la definición
-        de la solución hasta su desarrollo, despliegue y evolución.
-      </p>
-    </div>
-
-    <article class="border-t border-border pt-8">
-      <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <div class="flex flex-col justify-between">
-          <div>
-            <div class="mb-8 flex items-center justify-between">
-              <span class="text-sm font-medium text-muted"> 01 </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1 text-xs uppercase tracking-wider text-muted"
-              >
-                Proyecto profesional
-              </span>
-            </div>
-
-            <h3
-              class="text-4xl font-semibold tracking-[-0.03em] text-foreground md:text-5xl"
-            >
-              Test Flow
-            </h3>
-
-            <p class="mt-6 max-w-lg text-base leading-7 text-muted">
-              Plataforma interna para centralizar y dar seguimiento al ciclo de
-              pruebas de unidades en un entorno de manufactura, desde su
-              registro hasta los procesos de diagnóstico, validación y
-              liberación.
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-2">
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-              >
-                Django
-              </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-              >
-                PostgreSQL
-              </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-              >
-                JavaScript
-              </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-              >
-                Tailwind CSS
-              </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-              >
-                Nginx
-              </span>
-            </div>
-          </div>
-
-          <a
-            href="/proyectos/test-flow"
-            class="group mt-10 inline-flex w-fit items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
-          >
-            Ver caso de estudio
-
-            <span
-              class="transition-transform duration-300 group-hover:translate-x-1"
-              aria-hidden="true"
-            >
-              →
-            </span>
-          </a>
-        </div>
-
-        <div
-          class="group relative aspect-16/10 overflow-hidden rounded-3xl border border-border bg-surface"
+    <Reveal client:visible>
+      <div class="mb-16 md:mb-24">
+        <p
+          class="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-accent"
         >
-          <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgb(0_217_255/10%),transparent_45%)]"
-          >
-          </div>
+          02 / Proyectos destacados
+        </p>
 
-          <div
-            class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
-          >
-            <div
-              class="flex h-10 items-center gap-2 border-b border-border px-4"
-            >
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
-            </div>
+        <h2
+          class="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl md:text-6xl"
+        >
+          De la idea
+          <span class="block text-muted">a producción.</span>
+        </h2>
 
-            <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
-              <Image
-                src={testFlowDashboard}
-                alt="Dashboard principal de Test Flow con datos ficticios"
-                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-            </div>
-          </div>
-        </div>
+        <p class="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
+          Una selección de proyectos en los que he participado desde la
+          definición de la solución hasta su desarrollo, despliegue y evolución.
+        </p>
       </div>
-    </article>
+    </Reveal>
 
-    <article class="mt-28 border-t border-border pt-8 md:mt-36">
-      <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-        <div
-          class="group relative aspect-16/10 overflow-hidden rounded-3xl border border-border bg-surface lg:order-1"
-        >
-          <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgb(0_217_255/8%),transparent_45%)]"
-          >
+    <Reveal client:visible delay={0.05}>
+      <article class="border-t border-border pt-8">
+        <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div class="flex flex-col justify-between">
+            <div>
+              <div class="mb-8 flex items-center justify-between">
+                <span class="text-sm font-medium text-muted"> 01 </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1 text-xs uppercase tracking-wider text-muted"
+                >
+                  Proyecto profesional
+                </span>
+              </div>
+
+              <h3
+                class="text-4xl font-semibold tracking-[-0.03em] text-foreground md:text-5xl"
+              >
+                Test Flow
+              </h3>
+
+              <p class="mt-6 max-w-lg text-base leading-7 text-muted">
+                Plataforma interna para centralizar y dar seguimiento al ciclo
+                de pruebas de unidades en un entorno de manufactura, desde su
+                registro hasta los procesos de diagnóstico, validación y
+                liberación.
+              </p>
+
+              <div class="mt-8 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  Django
+                </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  PostgreSQL
+                </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  JavaScript
+                </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  Nginx
+                </span>
+              </div>
+            </div>
+
+            <a
+              href="/proyectos/test-flow"
+              class="group mt-10 inline-flex w-fit items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
+            >
+              Ver caso de estudio
+
+              <span
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
           </div>
 
           <div
-            class="absolute inset-6 rounded-xl border border-border bg-background/80"
+            class="group relative aspect-16/10 overflow-hidden rounded-3xl border border-border bg-surface"
           >
             <div
-              class="flex h-10 items-center gap-2 border-b border-border px-4"
+              class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgb(0_217_255/10%),transparent_45%)]"
             >
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
             </div>
 
-            <div class="flex h-[calc(100%-2.5rem)] items-center justify-center">
+            <div
+              class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
+            >
+              <div
+                class="flex h-10 items-center gap-2 border-b border-border px-4"
+              >
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+              </div>
+
               <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
                 <Image
-                  src={daleSkateHome}
-                  alt="Página principal de Dale Skate"
+                  src={testFlowDashboard}
+                  alt="Dashboard principal de Test Flow con datos ficticios"
                   class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                 />
               </div>
             </div>
           </div>
         </div>
+      </article>
+    </Reveal>
 
-        <div class="flex flex-col justify-between lg:order-2">
-          <div>
-            <div class="mb-8 flex items-center justify-between">
-              <span class="text-sm font-medium text-muted"> 02 </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1 text-xs uppercase tracking-wider text-muted"
-              >
-                Proyecto para cliente
-              </span>
+    <Reveal client:visible delay={0.05}>
+      <article class="mt-28 border-t border-border pt-8 md:mt-36">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+          <div
+            class="group relative aspect-16/10 overflow-hidden rounded-3xl border border-border bg-surface lg:order-1"
+          >
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgb(0_217_255/8%),transparent_45%)]"
+            >
             </div>
 
-            <h3
-              class="text-4xl font-semibold tracking-[-0.03em] text-foreground md:text-5xl"
+            <div
+              class="absolute inset-6 rounded-xl border border-border bg-background/80"
             >
-              Dale Skate
-            </h3>
-
-            <p class="mt-6 max-w-lg text-base leading-7 text-muted">
-              Plataforma web para una revista mexicana de skateboarding,
-              desarrollada para publicar y gestionar contenido editorial,
-              fotografías, videos y artículos.
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-2">
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              <div
+                class="flex h-10 items-center gap-2 border-b border-border px-4"
               >
-                React
-              </span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+              </div>
 
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              <div
+                class="flex h-[calc(100%-2.5rem)] items-center justify-center"
               >
-                PHP
-              </span>
-
-              <span
-                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-              >
-                MySQL
-              </span>
+                <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+                  <Image
+                    src={daleSkateHome}
+                    alt="Página principal de Dale Skate"
+                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="mt-10 flex flex-wrap gap-6">
-            <a
-              href="/proyectos/dale-skate"
-              class="group inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
-            >
-              Ver caso de estudio
-              <span
-                class="transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </a>
+          <div class="flex flex-col justify-between lg:order-2">
+            <div>
+              <div class="mb-8 flex items-center justify-between">
+                <span class="text-sm font-medium text-muted"> 02 </span>
 
-            <a
-              href="#"
-              class="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
-            >
-              Sitio web
-              <span aria-hidden="true">↗</span>
-            </a>
+                <span
+                  class="rounded-full border border-border px-3 py-1 text-xs uppercase tracking-wider text-muted"
+                >
+                  Proyecto para cliente
+                </span>
+              </div>
+
+              <h3
+                class="text-4xl font-semibold tracking-[-0.03em] text-foreground md:text-5xl"
+              >
+                Dale Skate
+              </h3>
+
+              <p class="mt-6 max-w-lg text-base leading-7 text-muted">
+                Plataforma web para una revista mexicana de skateboarding,
+                desarrollada para publicar y gestionar contenido editorial,
+                fotografías, videos y artículos.
+              </p>
+
+              <div class="mt-8 flex flex-wrap gap-2">
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  React
+                </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  PHP
+                </span>
+
+                <span
+                  class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+                >
+                  MySQL
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-6">
+              <a
+                href="/proyectos/dale-skate"
+                class="group inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
+              >
+                Ver caso de estudio
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </a>
+
+              <a
+                href="#"
+                class="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+              >
+                Sitio web
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </Reveal>
 
+
+    <Reveal client:visible delay={0.05}>
     <div
       class="mt-28 grid gap-6 border-t border-border pt-8 md:mt-36 md:grid-cols-2"
     >
@@ -367,7 +378,8 @@ import mcSkinStealerPreview from "../../assets/projects/mc-skin-stealer/preview.
 
           <p class="mt-4 max-w-xl leading-7 text-muted">
             Herramienta web para buscar y descargar skins de Minecraft a partir
-            del nombre de usuario con una interfaz sencilla y previsualización 3D.
+            del nombre de usuario con una interfaz sencilla y previsualización
+            3D.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-2">
@@ -399,5 +411,7 @@ import mcSkinStealerPreview from "../../assets/projects/mc-skin-stealer/preview.
         </div>
       </article>
     </div>
+
+    </Reveal>
   </div>
 </section>
