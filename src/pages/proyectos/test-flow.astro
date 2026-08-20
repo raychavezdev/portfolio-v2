@@ -26,7 +26,7 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
               Proyecto profesional
             </span>
 
-            <span class="text-sm text-muted"> Case study </span>
+            <span class="text-sm text-muted">Case study</span>
           </div>
 
           <h1
@@ -51,25 +51,21 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
         >
           <div>
             <p class="text-xs uppercase tracking-[0.2em] text-muted">Rol</p>
-
             <p class="mt-3 text-sm text-foreground">Full-Stack Development</p>
           </div>
 
           <div>
             <p class="text-xs uppercase tracking-[0.2em] text-muted">Tipo</p>
-
             <p class="mt-3 text-sm text-foreground">Plataforma interna</p>
           </div>
 
           <div>
             <p class="text-xs uppercase tracking-[0.2em] text-muted">Área</p>
-
             <p class="mt-3 text-sm text-foreground">Pruebas y manufactura</p>
           </div>
 
           <div>
             <p class="text-xs uppercase tracking-[0.2em] text-muted">Estado</p>
-
             <p class="mt-3 text-sm text-foreground">En producción</p>
           </div>
         </div>
@@ -282,7 +278,6 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
             </div>
 
             <div class="mt-12 grid gap-4 md:grid-cols-3">
-              <!-- Architecture -->
               <article
                 class="group rounded-3xl border border-border bg-surface/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/60"
               >
@@ -305,7 +300,6 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
                 </p>
               </article>
 
-              <!-- Interfaces -->
               <article
                 class="group rounded-3xl border border-border bg-surface/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/60"
               >
@@ -328,7 +322,6 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
                 </p>
               </article>
 
-              <!-- Production -->
               <article
                 class="group rounded-3xl border border-border bg-surface/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/60"
               >
@@ -533,6 +526,160 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
             <span class="tech-pill">Linux</span>
             <span class="tech-pill">Nginx</span>
             <span class="tech-pill">Gunicorn</span>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Technical decisions -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              07 / Decisiones técnicas
+            </p>
+          </div>
+
+          <div>
+            <div class="max-w-3xl">
+              <h2
+                class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+              >
+                Diseñar alrededor del proceso, no solamente de las pantallas.
+              </h2>
+
+              <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+                Conforme la plataforma creció, la arquitectura tuvo que
+                representar reglas y procesos que también evolucionaban. Las
+                decisiones técnicas se centraron en mantener una única fuente de
+                información, conservar la trazabilidad y permitir que distintas
+                áreas trabajaran sobre el mismo flujo.
+              </p>
+            </div>
+
+            <div class="mt-12 grid gap-4 lg:grid-cols-3">
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Estados y flujo
+                </p>
+
+                <h3
+                  class="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  El estado de la unidad como núcleo.
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  El modelo de datos representa las etapas, estados y
+                  transiciones de cada unidad para que las reglas de negocio
+                  determinen qué acciones son válidas en cada punto del proceso.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Trazabilidad
+                </p>
+
+                <h3
+                  class="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  Registrar el recorrido, no solo el resultado.
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Los movimientos y eventos relevantes se conservan como
+                  historial para poder reconstruir qué ocurrió con una unidad,
+                  incluso después de pasar por diferentes procesos o áreas.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Acceso por área
+                </p>
+
+                <h3
+                  class="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  Una plataforma, diferentes responsabilidades.
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Las distintas áreas utilizan la misma información, pero las
+                  acciones disponibles se adaptan a las responsabilidades y al
+                  punto del flujo en el que participa cada usuario.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section class="pb-32 md:pb-40">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-y border-border py-12 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              08 / Resultado
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              De registros dispersos a una plataforma utilizada en la operación.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              Test Flow transformó un seguimiento distribuido entre archivos y
+              registros independientes en una plataforma centralizada donde las
+              unidades, sus movimientos y su historial forman parte de un mismo
+              flujo de información.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              El proyecto continúa en producción y evoluciona conforme aparecen
+              nuevas necesidades operativas, convirtiéndose en una herramienta
+              que crece junto con el proceso para el que fue construida.
+            </p>
+
+            <div
+              class="mt-10 inline-flex items-center gap-3 rounded-full border border-accent/20 bg-accent/5 px-5 py-3"
+            >
+              <span class="size-2 rounded-full bg-accent"></span>
+              <span class="text-sm font-medium text-foreground">
+                Proyecto en producción y evolución continua
+              </span>
+            </div>
           </div>
         </div>
       </Reveal>
