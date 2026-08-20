@@ -5,6 +5,9 @@ import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import Reveal from "../../components/animations/Reveal";
 
 import dashboard from "../../assets/projects/test-flow/dashboard.png";
+import analytics from "../../assets/projects/test-flow/analytics.png";
+import debugFlow from "../../assets/projects/test-flow/debug-flow.png";
+import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
 ---
 
 <ProjectLayout
@@ -23,9 +26,7 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
               Proyecto profesional
             </span>
 
-            <span class="text-sm text-muted">
-              Case study
-            </span>
+            <span class="text-sm text-muted"> Case study </span>
           </div>
 
           <h1
@@ -49,43 +50,27 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
           class="mt-16 grid gap-8 border-y border-border py-8 sm:grid-cols-2 lg:grid-cols-4"
         >
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">
-              Rol
-            </p>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Rol</p>
 
-            <p class="mt-3 text-sm text-foreground">
-              Full-Stack Development
-            </p>
+            <p class="mt-3 text-sm text-foreground">Full-Stack Development</p>
           </div>
 
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">
-              Tipo
-            </p>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Tipo</p>
 
-            <p class="mt-3 text-sm text-foreground">
-              Plataforma interna
-            </p>
+            <p class="mt-3 text-sm text-foreground">Plataforma interna</p>
           </div>
 
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">
-              Área
-            </p>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Área</p>
 
-            <p class="mt-3 text-sm text-foreground">
-              Pruebas y manufactura
-            </p>
+            <p class="mt-3 text-sm text-foreground">Pruebas y manufactura</p>
           </div>
 
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted">
-              Estado
-            </p>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">Estado</p>
 
-            <p class="mt-3 text-sm text-foreground">
-              En producción
-            </p>
+            <p class="mt-3 text-sm text-foreground">En producción</p>
           </div>
         </div>
       </Reveal>
@@ -157,8 +142,8 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
 
             <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
               Test Flow nació como una plataforma interna para centralizar el
-              seguimiento de unidades a lo largo de su proceso de pruebas.
-              El sistema conecta diferentes etapas operativas y permite mantener
+              seguimiento de unidades a lo largo de su proceso de pruebas. El
+              sistema conecta diferentes etapas operativas y permite mantener
               trazabilidad sobre el estado de cada unidad.
             </p>
 
@@ -242,8 +227,8 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
 
             <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
               Sobre esa información se construyen dashboards, historiales y
-              herramientas operativas que permiten consultar el estado actual
-              de una unidad y entender cómo llegó hasta él.
+              herramientas operativas que permiten consultar el estado actual de
+              una unidad y entender cómo llegó hasta él.
             </p>
           </div>
         </div>
@@ -316,6 +301,158 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
     </div>
   </section>
 
+  <!-- Key features -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <div class="border-t border-border pt-10">
+        <Reveal client:visible>
+          <div class="grid gap-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20">
+            <div>
+              <p
+                class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+              >
+                05 / Funcionalidades
+              </p>
+            </div>
+
+            <div class="max-w-3xl">
+              <h2
+                class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+              >
+                Herramientas construidas alrededor del flujo operativo.
+              </h2>
+
+              <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+                Test Flow reúne diferentes herramientas que utilizan la misma
+                información para dar seguimiento a las unidades, consultar su
+                historial y visualizar el estado general de la operación.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <!-- Unit tracking -->
+        <Reveal client:visible y={24}>
+          <div class="mt-20">
+            <div
+              class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16"
+            >
+              <div>
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Seguimiento
+                </p>
+
+                <h3
+                  class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-3xl"
+                >
+                  Estado de las unidades en tiempo real.
+                </h3>
+
+                <p class="mt-5 text-base leading-7 text-muted">
+                  La vista de estaciones permite identificar rápidamente qué
+                  unidades se encuentran en pruebas, su estado actual y la etapa
+                  del proceso en la que están trabajando.
+                </p>
+              </div>
+
+              <div
+                class="overflow-hidden rounded-3xl border border-border bg-surface p-2 sm:p-3"
+              >
+                <Image
+                  src={unitTracking}
+                  alt="Seguimiento de unidades y estaciones de Test Flow con datos ficticios"
+                  class="w-full rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <!-- Debug history -->
+        <Reveal client:visible y={24}>
+          <div class="mt-24 border-t border-border pt-16">
+            <div
+              class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-16"
+            >
+              <div
+                class="overflow-hidden rounded-3xl border border-border bg-surface p-2 sm:p-3"
+              >
+                <Image
+                  src={debugFlow}
+                  alt="Historial de diagnóstico de una unidad en Test Flow con datos ficticios"
+                  class="w-full rounded-2xl"
+                />
+              </div>
+
+              <div>
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Trazabilidad
+                </p>
+
+                <h3
+                  class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-3xl"
+                >
+                  Un historial para entender qué ocurrió con cada unidad.
+                </h3>
+
+                <p class="mt-5 text-base leading-7 text-muted">
+                  Los movimientos, incidencias, reparaciones y reingresos quedan
+                  relacionados con la unidad, permitiendo reconstruir su
+                  recorrido y consultar las acciones realizadas durante el
+                  proceso.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <!-- Analytics -->
+        <Reveal client:visible y={24}>
+          <div class="mt-24 border-t border-border pt-16">
+            <div
+              class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16"
+            >
+              <div>
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Métricas
+                </p>
+
+                <h3
+                  class="mt-4 text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-3xl"
+                >
+                  Información operativa convertida en una vista general.
+                </h3>
+
+                <p class="mt-5 text-base leading-7 text-muted">
+                  Los dashboards utilizan la información registrada durante la
+                  operación para mostrar carga de trabajo, liberaciones,
+                  unidades en proceso y otros indicadores que facilitan el
+                  seguimiento del turno.
+                </p>
+              </div>
+
+              <div
+                class="overflow-hidden rounded-3xl border border-border bg-surface p-2 sm:p-3"
+              >
+                <Image
+                  src={analytics}
+                  alt="Dashboard de métricas operativas de Test Flow con datos ficticios"
+                  class="w-full rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </section>
+
   <!-- Stack -->
   <section class="pb-28 md:pb-36">
     <div class="page-container">
@@ -327,7 +464,7 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
             <p
               class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
             >
-              05 / Stack
+              06 / Stack
             </p>
           </div>
 
