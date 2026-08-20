@@ -1,0 +1,60 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Footer from "../components/layout/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const {
+  title,
+  description,
+  image = "/og-image.png",
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={image}
+  type="article"
+>
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="page-container">
+      <nav
+        class="mt-4 flex h-16 items-center justify-between rounded-2xl border border-border/80 bg-background/70 px-5 backdrop-blur-xl"
+        aria-label="Navegación del proyecto"
+      >
+        <a
+          href="/"
+          class="text-xl font-semibold tracking-[-0.04em] text-foreground transition-colors hover:text-accent"
+          aria-label="Volver al inicio"
+        >
+          RAY<span class="text-accent">/</span>DEV
+        </a>
+
+        <a
+          href="/#proyectos"
+          class="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+        >
+          <span
+            class="transition-transform duration-300 group-hover:-translate-x-1"
+            aria-hidden="true"
+          >
+            ←
+          </span>
+
+          Volver a proyectos
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <Footer />
+</BaseLayout>

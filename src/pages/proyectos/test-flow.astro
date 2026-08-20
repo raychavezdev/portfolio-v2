@@ -1,0 +1,348 @@
+---
+import { Image } from "astro:assets";
+
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import Reveal from "../../components/animations/Reveal";
+
+import dashboard from "../../assets/projects/test-flow/dashboard.png";
+---
+
+<ProjectLayout
+  title="Test Flow | Raymundo Chavez"
+  description="Case study de Test Flow, una plataforma interna desarrollada para centralizar y gestionar el ciclo de pruebas, diagnóstico, validación y liberación de unidades."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden pb-20 pt-40 md:pb-28 md:pt-48">
+    <div class="page-container relative z-10">
+      <Reveal client:load y={20}>
+        <div>
+          <div class="flex flex-wrap items-center gap-3">
+            <span
+              class="rounded-full border border-border bg-surface/40 px-3 py-1.5 text-xs uppercase tracking-[0.15em] text-muted"
+            >
+              Proyecto profesional
+            </span>
+
+            <span class="text-sm text-muted">
+              Case study
+            </span>
+          </div>
+
+          <h1
+            class="mt-8 max-w-5xl text-6xl font-semibold leading-[0.92] tracking-[-0.05em] text-foreground sm:text-7xl md:text-8xl lg:text-9xl"
+          >
+            Test Flow
+          </h1>
+
+          <p
+            class="mt-8 max-w-3xl text-xl leading-8 text-muted sm:text-2xl sm:leading-9"
+          >
+            Plataforma interna para centralizar y dar seguimiento al ciclo de
+            pruebas de unidades en un entorno de manufactura.
+          </p>
+        </div>
+      </Reveal>
+
+      <!-- Project meta -->
+      <Reveal client:load delay={0.05} y={20}>
+        <div
+          class="mt-16 grid gap-8 border-y border-border py-8 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Rol
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              Full-Stack Development
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Tipo
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              Plataforma interna
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Área
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              Pruebas y manufactura
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Estado
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              En producción
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+
+    <div
+      class="pointer-events-none absolute left-[60%] top-[20%] size-112 rounded-full bg-accent/5 blur-[140px]"
+      aria-hidden="true"
+    >
+    </div>
+  </section>
+
+  <!-- Hero screenshot -->
+  <section>
+    <div class="page-container">
+      <Reveal client:visible y={24}>
+        <div
+          class="group relative overflow-hidden rounded-3xl border border-border bg-surface p-3 sm:p-5"
+        >
+          <div
+            class="overflow-hidden rounded-2xl border border-border bg-background"
+          >
+            <div
+              class="flex h-11 items-center gap-2 border-b border-border px-4"
+            >
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+
+              <span
+                class="ml-3 text-[10px] uppercase tracking-[0.18em] text-muted"
+              >
+                Test Flow / Dashboard
+              </span>
+            </div>
+
+            <Image
+              src={dashboard}
+              alt="Dashboard principal de Test Flow con datos ficticios"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Context -->
+  <section class="section-spacing">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              01 / Contexto
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Un proceso operativo con múltiples etapas y decisiones.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              Test Flow nació como una plataforma interna para centralizar el
+              seguimiento de unidades a lo largo de su proceso de pruebas.
+              El sistema conecta diferentes etapas operativas y permite mantener
+              trazabilidad sobre el estado de cada unidad.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              Con el tiempo, la plataforma ha evolucionado para cubrir
+              necesidades relacionadas con pruebas, diagnóstico, reparación,
+              validación, liberación, métricas y seguimiento de actividades.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="pb-20 md:pb-28">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              02 / El problema
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              La información estaba distribuida entre procesos y herramientas.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              El seguimiento del proceso requiere conocer qué ocurrió con una
+              unidad, en qué etapa se encuentra, qué acciones fueron realizadas
+              y cuál debe ser su siguiente paso.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              La falta de una fuente central de información dificulta la
+              trazabilidad y obliga a consultar diferentes registros para
+              reconstruir el historial operativo.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="pb-20 md:pb-28">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              03 / La solución
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Una plataforma que modela el flujo completo de las unidades.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              La aplicación centraliza el registro de unidades, sus etapas de
+              prueba, estados, movimientos y procesos relacionados con
+              diagnóstico, validación y liberación.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              Sobre esa información se construyen dashboards, historiales y
+              herramientas operativas que permiten consultar el estado actual
+              de una unidad y entender cómo llegó hasta él.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- My role -->
+  <section class="pb-20 md:pb-28">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              04 / Mi participación
+            </p>
+          </div>
+
+          <div>
+            <h2
+              class="max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Desarrollo y evolución de la plataforma de principio a fin.
+            </h2>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-border bg-surface/30 p-5">
+                <p class="text-sm text-foreground">
+                  Desarrollo frontend y experiencia de usuario
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-surface/30 p-5">
+                <p class="text-sm text-foreground">
+                  Lógica de negocio y backend con Django
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-surface/30 p-5">
+                <p class="text-sm text-foreground">
+                  Modelado y evolución de datos
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-surface/30 p-5">
+                <p class="text-sm text-foreground">
+                  Dashboards y visualización de métricas
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-surface/30 p-5">
+                <p class="text-sm text-foreground">
+                  Despliegue y mantenimiento en producción
+                </p>
+              </div>
+
+              <div class="rounded-2xl border border-border bg-surface/30 p-5">
+                <p class="text-sm text-foreground">
+                  Evolución de funcionalidades a partir del uso real
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-y border-border py-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              05 / Stack
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="tech-pill">Django</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">Linux</span>
+            <span class="tech-pill">Nginx</span>
+            <span class="tech-pill">Gunicorn</span>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+</ProjectLayout>
