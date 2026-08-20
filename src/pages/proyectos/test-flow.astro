@@ -177,19 +177,23 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
             <h2
               class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
             >
-              La información estaba distribuida entre procesos y herramientas.
+              La información estaba fragmentada entre archivos de Excel y
+              registros independientes.
             </h2>
 
             <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
-              El seguimiento del proceso requiere conocer qué ocurrió con una
-              unidad, en qué etapa se encuentra, qué acciones fueron realizadas
-              y cuál debe ser su siguiente paso.
+              El seguimiento operativo dependía de diferentes archivos de Excel
+              utilizados para registrar unidades, resultados y actividades.
+              Conforme el proceso avanzaba, la información quedaba distribuida
+              entre distintos registros y era difícil obtener una vista
+              completa del estado de una unidad.
             </p>
 
             <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
-              La falta de una fuente central de información dificulta la
-              trazabilidad y obliga a consultar diferentes registros para
-              reconstruir el historial operativo.
+              Para reconstruir su historial era necesario consultar diferentes
+              fuentes y relacionar manualmente la información. Esto dificultaba
+              la trazabilidad, el seguimiento entre etapas y la consulta del
+              estado actual del proceso.
             </p>
           </div>
         </div>
@@ -252,48 +256,100 @@ import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
           </div>
 
           <div>
-            <h2
-              class="max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
-            >
-              Desarrollo y evolución de la plataforma de principio a fin.
-            </h2>
+            <div class="max-w-3xl">
+              <h2
+                class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+              >
+                Del concepto a producción: desarrollo full-stack desde cero.
+              </h2>
 
-            <div class="mt-10 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-border bg-surface/30 p-5">
-                <p class="text-sm text-foreground">
-                  Desarrollo frontend y experiencia de usuario
-                </p>
-              </div>
+              <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+                Inicié Test Flow desde cero, partiendo de las necesidades del
+                proceso operativo y transformándolas en una aplicación web capaz
+                de centralizar el seguimiento de las unidades. Definí la
+                estructura inicial del proyecto, el modelo de datos y los
+                principales flujos de la plataforma, desarrollando tanto el
+                backend como las interfaces utilizadas durante la operación.
+              </p>
 
-              <div class="rounded-2xl border border-border bg-surface/30 p-5">
-                <p class="text-sm text-foreground">
-                  Lógica de negocio y backend con Django
-                </p>
-              </div>
+              <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+                A partir de esa primera versión, he continuado evolucionando la
+                plataforma con funcionalidades para diagnóstico y reparación,
+                validaciones de proceso, liberación, métricas operativas y
+                trazabilidad histórica, además de participar en su despliegue,
+                mantenimiento y mejora continua en producción.
+              </p>
+            </div>
 
-              <div class="rounded-2xl border border-border bg-surface/30 p-5">
-                <p class="text-sm text-foreground">
-                  Modelado y evolución de datos
-                </p>
-              </div>
+            <div class="mt-12 grid gap-4 md:grid-cols-3">
+              <!-- Architecture -->
+              <article
+                class="group rounded-3xl border border-border bg-surface/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/60"
+              >
+                <div
+                  class="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-sm font-medium text-accent"
+                >
+                  01
+                </div>
 
-              <div class="rounded-2xl border border-border bg-surface/30 p-5">
-                <p class="text-sm text-foreground">
-                  Dashboards y visualización de métricas
-                </p>
-              </div>
+                <h3
+                  class="mt-6 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  Arquitectura &amp; backend
+                </h3>
 
-              <div class="rounded-2xl border border-border bg-surface/30 p-5">
-                <p class="text-sm text-foreground">
-                  Despliegue y mantenimiento en producción
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Definición de la estructura inicial, modelo de datos, estados,
+                  flujos, validaciones y reglas de negocio mediante Django y
+                  PostgreSQL.
                 </p>
-              </div>
+              </article>
 
-              <div class="rounded-2xl border border-border bg-surface/30 p-5">
-                <p class="text-sm text-foreground">
-                  Evolución de funcionalidades a partir del uso real
+              <!-- Interfaces -->
+              <article
+                class="group rounded-3xl border border-border bg-surface/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/60"
+              >
+                <div
+                  class="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-sm font-medium text-accent"
+                >
+                  02
+                </div>
+
+                <h3
+                  class="mt-6 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  Interfaces &amp; operación
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Desarrollo de dashboards, vistas de seguimiento, historiales y
+                  herramientas construidas alrededor de las necesidades reales
+                  de los usuarios.
                 </p>
-              </div>
+              </article>
+
+              <!-- Production -->
+              <article
+                class="group rounded-3xl border border-border bg-surface/30 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/60"
+              >
+                <div
+                  class="flex size-10 items-center justify-center rounded-xl border border-border bg-background text-sm font-medium text-accent"
+                >
+                  03
+                </div>
+
+                <h3
+                  class="mt-6 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  Producción &amp; evolución
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Puesta en producción, mantenimiento y evolución continua de la
+                  plataforma conforme aparecen nuevos procesos y necesidades
+                  operativas.
+                </p>
+              </article>
             </div>
           </div>
         </div>
