@@ -1,0 +1,701 @@
+---
+import { Image } from "astro:assets";
+
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import Reveal from "../../components/animations/Reveal";
+
+import dashboard from "../../assets/projects/devtrayck/dashboard.png";
+---
+
+<ProjectLayout
+  title="DevTrayck | Raymundo Chavez"
+  description="Case study de DevTrayck, una aplicación full-stack para organizar proyectos, bugs, mejoras y tareas de desarrollo mediante un flujo Kanban."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden pb-20 pt-40 md:pb-28 md:pt-48">
+    <div class="page-container relative z-10">
+      <Reveal client:load y={20}>
+        <div>
+          <div class="flex flex-wrap items-center gap-3">
+            <span
+              class="rounded-full border border-border bg-surface/40 px-3 py-1.5 text-xs uppercase tracking-[0.15em] text-muted"
+            >
+              Proyecto personal
+            </span>
+
+            <span class="text-sm text-muted">
+              Case study
+            </span>
+          </div>
+
+          <h1
+            class="mt-8 max-w-5xl text-6xl font-semibold leading-[0.92] tracking-[-0.05em] text-foreground sm:text-7xl md:text-8xl lg:text-9xl"
+          >
+            DevTrayck
+          </h1>
+
+          <p
+            class="mt-8 max-w-3xl text-xl leading-8 text-muted sm:text-2xl sm:leading-9"
+          >
+            Aplicación full-stack para organizar proyectos, bugs, mejoras y
+            tareas de desarrollo mediante un flujo Kanban.
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a
+              href="https://devtrayck.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              class="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:bg-accent"
+            >
+              Ver proyecto
+
+              <span
+                class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                ↗
+              </span>
+            </a>
+
+            <a
+              href="https://github.com/raychavezdev/devtrayck"
+              target="_blank"
+              rel="noreferrer"
+              class="group inline-flex items-center gap-3 rounded-full border border-border bg-surface/40 px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/40 hover:bg-surface"
+            >
+              GitHub
+
+              <span
+                class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                ↗
+              </span>
+            </a>
+          </div>
+        </div>
+      </Reveal>
+
+      <!-- Project meta -->
+      <Reveal client:load delay={0.05} y={20}>
+        <div
+          class="mt-16 grid gap-8 border-y border-border py-8 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Rol
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              Full-Stack Development
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Tipo
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              Proyecto personal
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Frontend
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              React + TypeScript
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted">
+              Backend
+            </p>
+
+            <p class="mt-3 text-sm text-foreground">
+              Django REST Framework
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+
+    <div
+      class="pointer-events-none absolute left-[60%] top-[20%] size-112 rounded-full bg-accent/5 blur-[140px]"
+      aria-hidden="true"
+    >
+    </div>
+  </section>
+
+  <!-- Hero screenshot -->
+  <section>
+    <div class="page-container">
+      <Reveal client:visible y={24}>
+        <div
+          class="relative overflow-hidden rounded-3xl border border-border bg-surface p-3 sm:p-5"
+        >
+          <div
+            class="overflow-hidden rounded-2xl border border-border bg-background"
+          >
+            <div
+              class="flex h-11 items-center gap-2 border-b border-border px-4"
+            >
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+              <span class="size-2 rounded-full bg-muted/30"></span>
+
+              <span
+                class="ml-3 text-[10px] uppercase tracking-[0.18em] text-muted"
+              >
+                DevTrayck / Project board
+              </span>
+            </div>
+
+            <Image
+              src={dashboard}
+              alt="Tablero Kanban de DevTrayck"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Idea -->
+  <section class="section-spacing">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              01 / La idea
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Una herramienta sencilla para organizar trabajo de desarrollo.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              DevTrayck nació como un proyecto personal alrededor de un problema
+              familiar para cualquier desarrollador: mantener organizados bugs,
+              nuevas funcionalidades, mejoras y tareas pendientes dentro de
+              diferentes proyectos.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              La idea fue mantener el flujo simple y visual mediante un tablero
+              Kanban donde cada tarea puede avanzar entre pendiente, en progreso
+              y completada.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Goal -->
+  <section class="pb-20 md:pb-28">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              02 / El objetivo
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Construir una aplicación full-stack de principio a fin.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              Más allá del tablero de tareas, el proyecto fue una oportunidad
+              para construir una aplicación completa separando frontend y
+              backend, diseñando una API REST y resolviendo autenticación,
+              persistencia, navegación y estado en el cliente.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              Cada cuenta mantiene sus propios proyectos y tareas mientras el
+              frontend consume recursos protegidos expuestos por la API.
+            </p>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              03 / Arquitectura
+            </p>
+          </div>
+
+          <div>
+            <h2
+              class="max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Frontend y backend desacoplados mediante una API REST.
+            </h2>
+
+            <p class="mt-8 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+              La interfaz y la API evolucionan de manera independiente y se
+              comunican mediante peticiones HTTP, manteniendo separadas la
+              experiencia del usuario y la lógica del servidor.
+            </p>
+
+            <div class="mt-12 grid gap-4 md:grid-cols-3">
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Frontend
+                </p>
+
+                <h3
+                  class="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  React + TypeScript
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Interfaz, navegación, estado de autenticación y gestión de
+                  proyectos y tareas desde el cliente.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  API
+                </p>
+
+                <h3
+                  class="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  Django REST Framework
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Endpoints para autenticación, proyectos y tareas con acceso
+                  restringido a la información del usuario autenticado.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p
+                  class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+                >
+                  Autenticación
+                </p>
+
+                <h3
+                  class="mt-5 text-xl font-semibold tracking-[-0.02em] text-foreground"
+                >
+                  JWT
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Access y refresh tokens para mantener sesiones y proteger los
+                  recursos expuestos por la API.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              04 / Funcionalidades
+            </p>
+          </div>
+
+          <div>
+            <div class="max-w-3xl">
+              <h2
+                class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+              >
+                Un flujo pensado alrededor de proyectos y tareas.
+              </h2>
+
+              <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+                Las funcionalidades principales se mantienen deliberadamente
+                enfocadas en organizar trabajo de desarrollo sin convertir el
+                producto en una herramienta excesivamente compleja.
+              </p>
+            </div>
+
+            <div class="mt-12 grid gap-4 sm:grid-cols-2">
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  Kanban
+                </p>
+
+                <h3 class="mt-4 text-xl font-semibold text-foreground">
+                  Flujo visual de trabajo
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Las tareas se organizan entre Pending, In Progress y Done,
+                  permitiendo visualizar rápidamente el estado del proyecto.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  Drag &amp; drop
+                </p>
+
+                <h3 class="mt-4 text-xl font-semibold text-foreground">
+                  Cambios de estado mediante interacción
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Las tareas pueden moverse y reordenarse directamente desde el
+                  tablero utilizando dnd-kit.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  Clasificación
+                </p>
+
+                <h3 class="mt-4 text-xl font-semibold text-foreground">
+                  Prioridad y tipo de tarea
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Bugs, features, mejoras y refactors pueden clasificarse además
+                  por prioridad para aportar contexto al tablero.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  Gestión
+                </p>
+
+                <h3 class="mt-4 text-xl font-semibold text-foreground">
+                  CRUD completo
+                </h3>
+
+                <p class="mt-4 text-sm leading-7 text-muted">
+                  Proyectos y tareas pueden crearse, consultarse, editarse y
+                  eliminarse desde una interfaz conectada con la API.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              05 / Modo demo
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Probar el producto sin crear una cuenta.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              Para reducir la fricción al mostrar el proyecto, desarrollé un
+              modo demo con un proyecto precargado y tareas que pueden
+              consultarse, crearse, editarse y moverse dentro del tablero.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              La información del modo demo se mantiene en el navegador, mientras
+              las acciones reservadas para una cuenta real permanecen separadas
+              del flujo normal de la aplicación.
+            </p>
+
+            <div
+              class="mt-10 rounded-3xl border border-accent/20 bg-accent/5 p-6"
+            >
+              <p
+                class="text-xs font-medium uppercase tracking-[0.22em] text-accent"
+              >
+                Objetivo
+              </p>
+
+              <p class="mt-4 text-base leading-7 text-foreground">
+                Permitir que alguien pueda entender y experimentar DevTrayck en
+                pocos segundos antes de decidir si quiere registrarse.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Authentication -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-t border-border pt-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              06 / Autenticación y datos
+            </p>
+          </div>
+
+          <div>
+            <div class="max-w-3xl">
+              <h2
+                class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+              >
+                Cada usuario trabaja únicamente con sus propios recursos.
+              </h2>
+
+              <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+                El backend protege los endpoints mediante JWT y filtra proyectos
+                y tareas de acuerdo con el usuario autenticado. De esta forma,
+                la separación de datos no depende únicamente de lo que muestre
+                la interfaz.
+              </p>
+            </div>
+
+            <div class="mt-12 grid gap-4 md:grid-cols-3">
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  01
+                </p>
+
+                <h3 class="mt-4 text-lg font-semibold text-foreground">
+                  Login
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  La API entrega access y refresh tokens después de autenticar
+                  las credenciales.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  02
+                </p>
+
+                <h3 class="mt-4 text-lg font-semibold text-foreground">
+                  Peticiones protegidas
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  El frontend utiliza el token al consumir los endpoints que
+                  requieren autenticación.
+                </p>
+              </article>
+
+              <article
+                class="rounded-3xl border border-border bg-surface/30 p-6"
+              >
+                <p class="text-xs uppercase tracking-[0.2em] text-accent">
+                  03
+                </p>
+
+                <h3 class="mt-4 text-lg font-semibold text-foreground">
+                  Aislamiento
+                </h3>
+
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  Los recursos que devuelve la API pertenecen al usuario que
+                  realiza la petición.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section class="pb-28 md:pb-36">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-y border-border py-10 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              07 / Stack
+            </p>
+          </div>
+
+          <div>
+            <div class="flex flex-wrap gap-3">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Vite</span>
+              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">React Router</span>
+              <span class="tech-pill">dnd-kit</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Django</span>
+              <span class="tech-pill">Django REST Framework</span>
+              <span class="tech-pill">Simple JWT</span>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section class="pb-32 md:pb-40">
+    <div class="page-container">
+      <Reveal client:visible>
+        <div
+          class="grid gap-10 border-y border-border py-12 lg:grid-cols-[0.35fr_1fr] lg:gap-20"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              08 / Resultado
+            </p>
+          </div>
+
+          <div class="max-w-3xl">
+            <h2
+              class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl"
+            >
+              Un proyecto para practicar el ciclo completo de una aplicación web.
+            </h2>
+
+            <p class="mt-8 text-base leading-8 text-muted sm:text-lg">
+              DevTrayck me permitió trabajar de forma integrada con interfaz,
+              estado en cliente, comunicación con APIs, autenticación y lógica
+              de backend dentro de un mismo producto.
+            </p>
+
+            <p class="mt-6 text-base leading-8 text-muted sm:text-lg">
+              El proyecto continúa siendo una base sobre la que puedo seguir
+              incorporando funcionalidades y profundizando en decisiones de
+              arquitectura, calidad y experiencia de usuario.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-3">
+              <a
+                href="https://devtrayck.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                class="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:bg-accent"
+              >
+                Probar DevTrayck
+
+                <span
+                  class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+              </a>
+
+              <a
+                href="https://github.com/raychavezdev/devtrayck"
+                target="_blank"
+                rel="noreferrer"
+                class="group inline-flex items-center gap-3 rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/40"
+              >
+                Ver código
+
+                <span
+                  class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </Reveal>
+    </div>
+  </section>
+</ProjectLayout>
