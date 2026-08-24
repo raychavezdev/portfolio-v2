@@ -2,16 +2,24 @@
 import BaseLayout from "./BaseLayout.astro";
 import Footer from "../components/layout/Footer.astro";
 
+interface ProjectNavigation {
+  eyebrow: string;
+  title: string;
+  href: string;
+}
+
 interface Props {
   title: string;
   description: string;
   image?: string;
+  navigation?: ProjectNavigation;
 }
 
 const {
   title,
   description,
   image = "/og-image.png",
+  navigation,
 } = Astro.props;
 ---
 
@@ -54,6 +62,38 @@ const {
 
   <main>
     <slot />
+
+    {
+      navigation && (
+        <section class="pb-28 md:pb-36">
+          <div class="page-container">
+            <a
+              href={navigation.href}
+              class="group block overflow-hidden rounded-3xl border border-border bg-surface/30 p-8 transition-all duration-300 hover:border-accent/30 hover:bg-surface/60 sm:p-10 md:p-12"
+            >
+              <div class="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p class="text-xs font-medium uppercase tracking-[0.25em] text-accent">
+                    {navigation.eyebrow}
+                  </p>
+
+                  <p class="mt-5 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl md:text-5xl">
+                    {navigation.title}
+                  </p>
+                </div>
+
+                <span
+                  class="flex size-12 shrink-0 items-center justify-center rounded-full border border-border text-xl text-muted transition-all duration-300 group-hover:border-accent/40 group-hover:bg-accent/5 group-hover:text-accent"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </div>
+            </a>
+          </div>
+        </section>
+      )
+    }
   </main>
 
   <Footer />
