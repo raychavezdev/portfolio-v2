@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import Footer from "../components/layout/Footer.astro";
+---
+
+<BaseLayout
+  title="Página no encontrada | Raymundo Chavez"
+  description="La página que buscas no existe o fue movida."
+>
+  <Navbar />
+
+  <main>
+    <section
+      class="relative flex min-h-[calc(100vh-8rem)] items-center overflow-hidden pb-20 pt-36 sm:pt-40"
+    >
+      <div class="page-container relative z-10">
+        <div class="mx-auto max-w-4xl text-center">
+          <p class="text-sm font-medium uppercase tracking-[0.3em] text-accent">
+            Error 404
+          </p>
+
+          <h1
+            class="mt-6 text-7xl font-semibold tracking-[-0.06em] text-foreground sm:text-8xl md:text-9xl"
+          >
+            Página no
+            <span class="block text-muted">encontrada.</span>
+          </h1>
+
+          <p
+            class="mx-auto mt-8 max-w-xl text-base leading-7 text-muted sm:text-lg"
+          >
+            Parece que la página que buscas no existe, fue movida o la dirección
+            no es correcta.
+          </p>
+
+          <div
+            class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
+            <a
+              href="/"
+              class="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:bg-accent"
+            >
+              Volver al inicio
+
+              <span
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
+
+            <a
+              href="/#proyectos"
+              class="group inline-flex items-center gap-3 rounded-full border border-border bg-surface/40 px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/40 hover:bg-surface"
+            >
+              Ver proyectos
+
+              <span
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background decoration -->
+      <div
+        class="pointer-events-none absolute left-1/2 top-1/2 size-128 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/5 blur-[140px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div
+        class="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 select-none text-[16rem] font-semibold leading-none tracking-[-0.08em] text-foreground/[0.015] sm:text-[22rem] md:text-[30rem]"
+        aria-hidden="true"
+      >
+        404
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
