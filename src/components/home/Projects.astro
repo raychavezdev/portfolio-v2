@@ -5,11 +5,13 @@ import testFlowDashboard from "../../assets/projects/test-flow/dashboard.png";
 import daleSkateHome from "../../assets/projects/dale-skate/home.png";
 import devTrayckDashboard from "../../assets/projects/devtrayck/dashboard.png";
 import mcSkinStealerPreview from "../../assets/projects/mc-skin-stealer/preview.png";
+
 import Reveal from "../animations/Reveal";
 ---
 
 <section id="proyectos" class="section-spacing">
   <div class="page-container">
+    <!-- Heading -->
     <Reveal client:visible>
       <div class="mb-16 md:mb-24">
         <p
@@ -22,7 +24,7 @@ import Reveal from "../animations/Reveal";
           class="max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl md:text-6xl"
         >
           De la idea
-          <span class="block text-muted">a producción.</span>
+          <span class="block text-muted"> a producción. </span>
         </h2>
 
         <p class="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
@@ -32,6 +34,7 @@ import Reveal from "../animations/Reveal";
       </div>
     </Reveal>
 
+    <!-- Test Flow -->
     <Reveal client:visible delay={0.05}>
       <article class="border-t border-border pt-8">
         <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -54,10 +57,10 @@ import Reveal from "../animations/Reveal";
               </h3>
 
               <p class="mt-6 max-w-lg text-base leading-7 text-muted">
-                Plataforma interna para centralizar y dar seguimiento al ciclo
-                de pruebas de unidades en un entorno de manufactura, desde su
-                registro hasta los procesos de diagnóstico, validación y
-                liberación.
+                Plataforma interna desarrollada desde cero para centralizar y
+                dar seguimiento al ciclo de pruebas de unidades en un entorno de
+                manufactura, desde su registro hasta los procesos de
+                diagnóstico, validación y liberación.
               </p>
 
               <div class="mt-8 flex flex-wrap gap-2">
@@ -140,6 +143,7 @@ import Reveal from "../animations/Reveal";
       </article>
     </Reveal>
 
+    <!-- Dale Skate -->
     <Reveal client:visible delay={0.05}>
       <article class="mt-28 border-t border-border pt-8 md:mt-36">
         <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
@@ -152,7 +156,7 @@ import Reveal from "../animations/Reveal";
             </div>
 
             <div
-              class="absolute inset-6 rounded-xl border border-border bg-background/80"
+              class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
             >
               <div
                 class="flex h-10 items-center gap-2 border-b border-border px-4"
@@ -162,16 +166,12 @@ import Reveal from "../animations/Reveal";
                 <span class="size-2 rounded-full bg-muted/30"></span>
               </div>
 
-              <div
-                class="flex h-[calc(100%-2.5rem)] items-center justify-center"
-              >
-                <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
-                  <Image
-                    src={daleSkateHome}
-                    alt="Página principal de Dale Skate"
-                    class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
-                </div>
+              <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+                <Image
+                  src={daleSkateHome}
+                  alt="Página principal de Dale Skate"
+                  class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                />
               </div>
             </div>
           </div>
@@ -227,19 +227,29 @@ import Reveal from "../animations/Reveal";
                 class="group inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
               >
                 Ver caso de estudio
+
                 <span
                   class="transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden="true"
                 >
                   →
                 </span>
               </a>
 
               <a
-                href="#"
+                href="https://daleskate.com/"
+                target="_blank"
+                rel="noreferrer"
                 class="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
               >
                 Sitio web
-                <span aria-hidden="true">↗</span>
+
+                <span
+                  class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
               </a>
             </div>
           </div>
@@ -247,171 +257,225 @@ import Reveal from "../animations/Reveal";
       </article>
     </Reveal>
 
-
+    <!-- Secondary projects -->
     <Reveal client:visible delay={0.05}>
-    <div
-      class="mt-28 grid gap-6 border-t border-border pt-8 md:mt-36 md:grid-cols-2"
-    >
-      <article class="group">
-        <div
-          class="relative aspect-4/3 overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-300 group-hover:border-accent/30"
-        >
+      <div
+        class="mt-28 grid gap-6 border-t border-border pt-8 md:mt-36 md:grid-cols-2"
+      >
+        <!-- DevTrayck -->
+        <article class="group">
           <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgb(0_217_255/8%),transparent_50%)]"
-          >
-          </div>
-
-          <div
-            class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
+            class="relative aspect-4/3 overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-300 group-hover:border-accent/30"
           >
             <div
-              class="flex h-10 items-center gap-2 border-b border-border px-4"
+              class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgb(0_217_255/8%),transparent_50%)]"
             >
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
             </div>
 
-            <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
-              <Image
-                src={devTrayckDashboard}
-                alt="Gestión de tareas de un proyecto en DevTrayck"
-                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-              />
+            <div
+              class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
+            >
+              <div
+                class="flex h-10 items-center gap-2 border-b border-border px-4"
+              >
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+              </div>
+
+              <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+                <Image
+                  src={devTrayckDashboard}
+                  alt="Gestión de tareas de un proyecto en DevTrayck"
+                  class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="mt-6">
-          <div class="flex items-center justify-between gap-4">
-            <span class="text-sm text-muted">03</span>
+          <div class="mt-6">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm text-muted"> 03 </span>
 
-            <span class="text-xs uppercase tracking-wider text-muted">
-              Proyecto personal
-            </span>
+              <span class="text-xs uppercase tracking-wider text-muted">
+                Proyecto personal
+              </span>
+            </div>
+
+            <h3
+              class="mt-4 text-3xl font-semibold tracking-tight text-foreground"
+            >
+              DevTrayck
+            </h3>
+
+            <p class="mt-4 max-w-xl leading-7 text-muted">
+              Aplicación full-stack para organizar proyectos, bugs, mejoras y
+              tareas mediante un tablero Kanban, con autenticación y una API
+              REST desacoplada del frontend.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              >
+                React
+              </span>
+
+              <span
+                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              >
+                TypeScript
+              </span>
+
+              <span
+                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              >
+                Django REST
+              </span>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-6">
+              <a
+                href="/proyectos/devtrayck"
+                class="group inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
+              >
+                Ver caso de estudio
+
+                <span
+                  class="transition-transform duration-300 group-hover:translate-x-1"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </a>
+
+              <a
+                href="https://devtrayck.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                class="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+              >
+                Demo
+
+                <span
+                  class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+              </a>
+            </div>
           </div>
+        </article>
 
-          <h3
-            class="mt-4 text-3xl font-semibold tracking-tight text-foreground"
-          >
-            DevTrayck
-          </h3>
-
-          <p class="mt-4 max-w-xl leading-7 text-muted">
-            Aplicación full-stack para organizar proyectos y tareas, con
-            autenticación, API REST y despliegue independiente de frontend y
-            backend.
-          </p>
-
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              React
-            </span>
-
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              Django REST
-            </span>
-
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              PostgreSQL
-            </span>
-          </div>
-
-          <a
-            href="/proyectos/devtrayck"
-            class="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
-          >
-            Ver proyecto →
-          </a>
-        </div>
-      </article>
-      <article class="group">
-        <div
-          class="relative aspect-4/3 overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-300 group-hover:border-accent/30"
-        >
+        <!-- MC Skin Stealer -->
+        <article class="group">
           <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgb(0_217_255/8%),transparent_50%)]"
-          >
-          </div>
-
-          <div
-            class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
+            class="relative aspect-4/3 overflow-hidden rounded-3xl border border-border bg-surface transition-colors duration-300 group-hover:border-accent/30"
           >
             <div
-              class="flex h-10 items-center gap-2 border-b border-border px-4"
+              class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgb(0_217_255/8%),transparent_50%)]"
             >
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
-              <span class="size-2 rounded-full bg-muted/30"></span>
             </div>
 
-            <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
-              <Image
-                src={mcSkinStealerPreview}
-                alt="Interfaz de MC Skin Stealer mostrando el resultado de una búsqueda"
-                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-              />
+            <div
+              class="absolute inset-6 overflow-hidden rounded-xl border border-border bg-background/80"
+            >
+              <div
+                class="flex h-10 items-center gap-2 border-b border-border px-4"
+              >
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+                <span class="size-2 rounded-full bg-muted/30"></span>
+              </div>
+
+              <div class="relative h-[calc(100%-2.5rem)] overflow-hidden">
+                <Image
+                  src={mcSkinStealerPreview}
+                  alt="Interfaz de MC Skin Stealer mostrando el resultado de una búsqueda"
+                  class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="mt-6">
-          <div class="flex items-center justify-between gap-4">
-            <span class="text-sm text-muted">04</span>
+          <div class="mt-6">
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm text-muted"> 04 </span>
 
-            <span class="text-xs uppercase tracking-wider text-muted">
-              Proyecto personal
-            </span>
+              <span class="text-xs uppercase tracking-wider text-muted">
+                Proyecto personal
+              </span>
+            </div>
+
+            <h3
+              class="mt-4 text-3xl font-semibold tracking-tight text-foreground"
+            >
+              MC Skin Stealer
+            </h3>
+
+            <p class="mt-4 max-w-xl leading-7 text-muted">
+              Herramienta web para buscar y descargar skins de Minecraft a
+              partir del nombre de usuario, con una interfaz sencilla y
+              previsualización 3D.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span
+                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              >
+                React
+              </span>
+
+              <span
+                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              >
+                Vite
+              </span>
+
+              <span
+                class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
+              >
+                i18n
+              </span>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-6">
+              <a
+                href="https://mc-skin-stealer.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                class="group inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
+              >
+                Ver proyecto
+
+                <span
+                  class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+              </a>
+
+              <a
+                href="https://github.com/raychavezdev/mc-skin-stealer"
+                target="_blank"
+                rel="noreferrer"
+                class="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+              >
+                GitHub
+
+                <span
+                  class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  ↗
+                </span>
+              </a>
+            </div>
           </div>
-
-          <h3
-            class="mt-4 text-3xl font-semibold tracking-tight text-foreground"
-          >
-            MC Skin Stealer
-          </h3>
-
-          <p class="mt-4 max-w-xl leading-7 text-muted">
-            Herramienta web para buscar y descargar skins de Minecraft a partir
-            del nombre de usuario con una interfaz sencilla y previsualización
-            3D.
-          </p>
-
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              React
-            </span>
-
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              Vite
-            </span>
-
-            <span
-              class="rounded-full border border-border px-3 py-1.5 text-xs text-muted"
-            >
-              i18n
-            </span>
-          </div>
-
-          <a
-            href="/proyectos/mc-skin-stealer"
-            class="mt-8 inline-flex items-center gap-3 text-sm font-medium text-foreground transition-colors hover:text-accent"
-          >
-            Ver proyecto →
-          </a>
-        </div>
-      </article>
-    </div>
-
+        </article>
+      </div>
     </Reveal>
   </div>
 </section>
