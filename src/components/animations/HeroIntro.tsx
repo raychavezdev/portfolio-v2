@@ -1,5 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
 
+import MagneticButton from "../ui/MagneticButton";
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -76,33 +78,37 @@ export default function HeroIntro() {
         variants={shouldReduceMotion ? reducedVariants : itemVariants}
         className="mt-10 flex flex-wrap items-center gap-4"
       >
-        <a
-          href="#proyectos"
-          className="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:bg-accent"
-        >
-          Ver mi trabajo
-          <span
-            className="transition-transform duration-300 group-hover:translate-x-1"
-            aria-hidden="true"
+        <MagneticButton strength={10}>
+          <a
+            href="#proyectos"
+            className="group inline-flex items-center gap-3 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:bg-accent"
           >
-            →
-          </span>
-        </a>
+            Ver mi trabajo
+            <span
+              className="transition-transform duration-300 group-hover:translate-x-1"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </a>
+        </MagneticButton>
 
-        <a
-          href="https://github.com/raychavezdev"
-          target="_blank"
-          rel="noreferrer"
-          className="group inline-flex items-center gap-3 rounded-full border border-border bg-surface/60 px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/50 hover:bg-surface-light"
-        >
-          GitHub
-          <span
-            className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            aria-hidden="true"
+        <MagneticButton strength={8}>
+          <a
+            href="https://github.com/raychavezdev"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-3 rounded-full border border-border bg-surface/60 px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 hover:border-accent/50 hover:bg-surface-light"
           >
-            ↗
-          </span>
-        </a>
+            GitHub
+            <span
+              className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              aria-hidden="true"
+            >
+              ↗
+            </span>
+          </a>
+        </MagneticButton>
       </motion.div>
     </motion.div>
   );

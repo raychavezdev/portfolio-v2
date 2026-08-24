@@ -8,17 +8,20 @@ import dashboard from "../../assets/projects/test-flow/dashboard.png";
 import analytics from "../../assets/projects/test-flow/analytics.png";
 import debugFlow from "../../assets/projects/test-flow/debug-flow.png";
 import unitTracking from "../../assets/projects/test-flow/unit-tracking.png";
+
+import CaseStudyIntro from "../../components/projects/CaseStudyIntro.astro";
 ---
 
 <ProjectLayout
   title="Test Flow | Raymundo Chavez"
   description="Case study de Test Flow, una plataforma interna desarrollada para centralizar y gestionar el ciclo de pruebas, diagnóstico, validación y liberación de unidades."
   navigation={{
-  eyebrow: "Siguiente proyecto",
-  title: "Dale Skate",
-  href: "/proyectos/dale-skate",
-}}
+    eyebrow: "Siguiente proyecto",
+    title: "Dale Skate",
+    href: "/proyectos/dale-skate",
+  }}
 >
+  <CaseStudyIntro index="01" title="Test Flow" />
   <!-- Hero -->
   <section class="relative overflow-hidden pb-20 pt-40 md:pb-28 md:pt-48">
     <div class="page-container relative z-10">

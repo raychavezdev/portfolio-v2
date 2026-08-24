@@ -52,16 +52,21 @@ body {
   color: var(--color-background);
 }
 
-
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 4px;
 }
 
+a:focus-visible {
+  outline: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 2px var(--color-background),
+              0 0 0 4px var(--color-accent);
+}
+
 :focus:not(:focus-visible) {
   outline: none;
 }
-
 
 @layer components {
   /* Layout */
@@ -163,6 +168,37 @@ body {
 
   .hero-glow {
     animation: hero-glow-float 10s ease-in-out infinite;
+  }
+
+  .animated-link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease;
+  }
+
+  .animated-link:hover::after,
+  .animated-link:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animated-link::after {
+      transition: none;
+    }
   }
 
   @keyframes hero-glow-float {
